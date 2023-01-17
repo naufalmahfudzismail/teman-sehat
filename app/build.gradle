@@ -1,0 +1,177 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.appdistribution'
+apply plugin: 'com.google.firebase.crashlytics'
+apply plugin: 'com.google.firebase.firebase-perf'
+
+
+android {
+    compileSdk 33
+
+    def final appName = "Teman Sehat"
+
+    compileSdkVersion 33
+
+    def versionPropsFile = file('version.properties')
+    Properties versionProps = new Properties()
+    if (versionPropsFile.canRead()) {
+        versionProps.load(new FileInputStream(versionPropsFile))
+    } else {
+        versionProps['VERSION_CODE'] = '0'
+    }
+    def code = versionProps['VERSION_CODE'].toInteger() + 1
+    versionProps['VERSION_CODE'] = code.toString()
+    versionProps.store(versionPropsFile.newWriter(), null)
+
+
+    defaultConfig {
+        applicationId "id.depok.posyandu"
+        minSdk 21
+        targetSdk 33
+        versionCode code
+        versionName "1.0.0($code)"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            ext.enableCrashlytics = true
+            debuggable true
+            versionNameSuffix '-RELEASE'
+            if (project.hasProperty("BETA_RELEASE_NOTES")) {
+                ext.betaDistributionReleaseNotes = project.property('BETA_RELEASE_NOTES')
+            }
+        }
+        debug {
+            ext.enableCrashlytics = true
+            versionNameSuffix '-DEBUG'
+            if (project.hasProperty("BETA_RELEASE_NOTES")) {
+                ext.betaDistributionReleaseNotes = project.property('BETA_RELEASE_NOTES')
+            }
+        }
+    }
+
+    signingConfigs {
+        production {
+            //keyAlias 'CowayProduction'
+            //keyPassword '@Coway2019'
+            storeFile file("$rootDir/production_keystore.jks")
+            //storePassword '@Coway2019'
+        }
+        staging {
+            keyAlias 'key0'
+            keyPassword '123456'
+            storeFile file("$rootDir/staging_keystore.jks")
+            storePassword '123456'
+        }
+    }
+
+    flavorDimensions "version"
+    productFlavors {
+        staging {
+            signingConfig signingConfigs.staging
+            applicationIdSuffix '.staging'
+            dimension "version"
+            buildConfigField "String", 'BASE_URL', '"https://api-sipandu.ujicoba.cloud/api/"'
+            buildConfigField "String", 'BASE_IMG_URL', '"https://api-sipandu.ujicoba.cloud/public/files/"'
+            resValue "string", "app_name", appName + " - STG"
+            firebaseAppDistribution {
+                if (project.hasProperty("BETA_RELEASE_NOTES")) {
+                    releaseNotes = project.property('BETA_RELEASE_NOTES')
+                }
+            }
+        }
+        production {
+            signingConfig signingConfigs.production
+            dimension "version"
+            buildConfigField "String", 'BASE_URL', '"https://api-sipandu.ujicoba.cloud/api/"'
+            buildConfigField "String", 'BASE_IMG_URL', '"https://api-sipandu.ujicoba.cloud/public/files/"'
+            resValue "string", "app_name", appName
+            firebaseAppDistribution {
+                if (project.hasProperty("BETA_RELEASE_NOTES")) {
+                    releaseNotes = project.property('BETA_RELEASE_NOTES')
+                }
+            }
+
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+
+    ext {
+        coroutinesVersion = "1.3.7"
+    }
+
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.5.1'
+    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.0'
+
+    //CORE
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.9.0'
+    implementation 'androidx.appcompat:appcompat:1.7.0-alpha01'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    implementation 'com.github.evrencoskun:TableView:v0.8.9.4'
+
+    //lifecycle persistent
+    implementation 'android.arch.persistence.room:runtime:1.1.1'
+    kapt 'android.arch.persistence.room:compiler:1.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    implementation 'android.arch.lifecycle:reactivestreams:1.1.1'
+
+    //NETWORK
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.5.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.10'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:3.12.10'
+    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    //UTILS
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.1.1'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0'
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation 'com.obsez.android.lib.filechooser:filechooser:1.2.0'
+
+    debugImplementation 'com.readystatesoftware.chuck:library:1.1.0'
+    releaseImplementation 'com.readystatesoftware.chuck:library-no-op:1.1.0'
+
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+    //FIREBASE
+    implementation 'com.google.firebase:firebase-config:21.2.0'
+    implementation 'com.google.firebase:firebase-core:21.1.1'
+    implementation 'com.google.firebase:firebase-analytics:21.2.0'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.2'
+    implementation 'com.google.firebase:firebase-perf-ktx:20.3.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:23.1.0'
+
+
+    //coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'
+}

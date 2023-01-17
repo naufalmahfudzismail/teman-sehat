@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.profile.ProfileActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:padding="@dimen/margin_1x">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_marginTop="@dimen/margin_half"
+                    android:id="@+id/edtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLabelAddress"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="text"
+                    android:padding="@dimen/margin_1x"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NIK" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="@dimen/margin_half"
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:counterEnabled="true"
+                app:counterMaxLength="16"
+                app:hintAnimationEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:maxLength="16"
+                    android:id="@+id/edtNik"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLabelAddress"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="number"
+                    android:padding="@dimen/margin_1x"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:id="@+id/tvLabelAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Email" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtEmail"
+                    android:focusable="false"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLabelAddress"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="@dimen/margin_1x"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/margin_1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Nomor WhatsApp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:hintAnimationEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLabelAddress"
+                    android:fontFamily="@font/poppins_regular"
+                    android:inputType="phone"
+                    android:padding="@dimen/margin_1x"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Status Pelatihan" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginTop="@dimen/margin_quarter"
+                android:id="@+id/tvSkills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="Keahlian" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ganti Password" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:passwordToggleEnabled="true"
+                app:hintAnimationEnabled="true">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtChangePassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvLabelAddress"
+                    android:layout_marginBottom="@dimen/margin_half"
+                    android:drawablePadding="@dimen/margin_1x"
+                    android:fontFamily="@font/poppins_regular"
+                    android:hint="Password"
+                    android:inputType="numberPassword"
+                    android:padding="@dimen/margin_1x"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="13sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_marginTop="@dimen/margin_1x"
+                android:id="@+id/btnAddSkill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scrollContent"
+                android:backgroundTint="@color/colorGrey"
+                android:text="Tambah pelatihan" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scrollContent"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:text="Simpan" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogOut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/scrollContent"
+                android:layout_marginTop="@dimen/margin_1x"
+                android:backgroundTint="@color/colorAccentRed"
+                android:text="Log Out" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include layout="@layout/item_list_handle_state"/>
+
+
+</RelativeLayout>

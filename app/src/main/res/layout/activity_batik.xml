@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.jentik.JentikFormActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/header" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:padding="@dimen/margin_1x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_quarter"
+            android:text="Nomor Kartu Keluarga" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            app:counterEnabled="true"
+            app:counterMaxLength="16"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtNik"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Isi Nomor KK"
+                android:inputType="number"
+                android:maxLength="16"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <ProgressBar
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:id="@+id/loadingKk"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerInParent="true"
+            android:progress="200" />
+
+        <TextView
+            android:visibility="gone"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_1x"
+            android:text="Data Kartu keluarga Ditemukan!"
+            android:id="@+id/tvFindKK"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_quarter"
+            android:text="Status Jentik" />
+
+
+        <RadioGroup
+            android:id="@+id/rgJentik"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbYes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Ada" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/rbNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Tidak ada" />
+
+        </RadioGroup>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_1x"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:layout_marginEnd="@dimen/margin_1x"
+        android:layout_marginBottom="@dimen/margin_1x"
+        android:text="Simpan" />
+
+</RelativeLayout>

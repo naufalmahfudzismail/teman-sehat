@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_oval_grey"
+    android:orientation="vertical">
+
+    <TextView
+        android:padding="@dimen/margin_half"
+        android:id="@+id/tvOptionSpinnerItem"
+        style="@style/BaseTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Individual"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold" />
+</LinearLayout>

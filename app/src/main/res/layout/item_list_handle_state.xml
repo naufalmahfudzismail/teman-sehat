@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvEmptyData"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:text="Data tidak ditemukan"
+      android:textStyle="italic" />
+
+  <ProgressBar
+      android:id="@+id/progressData"
+      android:layout_width="72dp"
+      android:layout_height="72dp"
+      android:layout_centerInParent="true"
+      android:progress="200" />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:visibility="gone"
+      android:id="@+id/tvLongTimeLoad"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@id/progressData"
+      android:layout_centerInParent="true"
+      android:layout_marginTop="@dimen/margin_2x"
+      android:gravity="center"
+      android:text="Calculating... it takes a little bit longer time"
+      android:textSize="13sp" />
+
+  <androidx.appcompat.widget.LinearLayoutCompat
+      android:id="@+id/llNoConnection"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:gravity="center"
+      android:orientation="vertical"
+      android:visibility="gone">
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        style="@style/MenuTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tidak ada Koneksi" />
+
+  </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>

@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contentEdit"
+    android:layout_width="match_parent"
+    android:padding="@dimen/margin_quarter"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:text="Nama Posyandu" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:enabled="false"
+                android:id="@+id/tvPosyanduName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:layout_marginStart="@dimen/margin_1x"
+                android:layout_marginEnd="@dimen/margin_1x"
+                android:drawablePadding="@dimen/margin_1x"
+                android:focusable="false"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:text="Ketua" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:enabled="false"
+                android:id="@+id/tvLeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:layout_marginStart="@dimen/margin_1x"
+                android:layout_marginEnd="@dimen/margin_1x"
+                android:layout_marginBottom="@dimen/margin_half"
+                android:drawablePadding="@dimen/margin_1x"
+                android:focusable="false"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:text="Nomor WhatsApp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:enabled="false"
+                android:id="@+id/tvPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:layout_marginStart="@dimen/margin_1x"
+                android:layout_marginEnd="@dimen/margin_1x"
+                android:layout_marginBottom="@dimen/margin_half"
+                android:drawablePadding="@dimen/margin_1x"
+                android:focusable="false"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="text"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+           android:layout_marginBottom="@dimen/margin_half"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Alamat" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:gravity="top|start"
+                android:enabled="false"
+                android:id="@+id/tvAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:layout_marginStart="@dimen/margin_1x"
+                android:layout_marginEnd="@dimen/margin_1x"
+                android:layout_marginBottom="@dimen/margin_half"
+                android:drawablePadding="@dimen/margin_1x"
+                android:focusable="false"
+                android:lines="3"
+                android:inputType="textCapSentences|textMultiLine"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Status Kepemilikan Lahan" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:enabled="false"
+                android:id="@+id/tvSkl"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:layout_marginStart="@dimen/margin_1x"
+                android:layout_marginEnd="@dimen/margin_1x"
+                android:drawablePadding="@dimen/margin_1x"
+                android:fontFamily="@font/poppins_regular"
+                android:inputType="textCapCharacters"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLabelAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:fontFamily="@font/poppins_bold"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:text="Strata" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/TextInputLayoutStyle"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:layout_height="wrap_content"
+            app:hintAnimationEnabled="true">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:enabled="false"
+                android:id="@+id/tvStrata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvLabelAddress"
+                android:layout_marginStart="@dimen/margin_1x"
+                android:layout_marginEnd="@dimen/margin_1x"
+                android:drawablePadding="@dimen/margin_1x"
+                android:fontFamily="@font/poppins_regular"
+                android:maxLength="13"
+                android:padding="@dimen/margin_1x"
+                android:textColor="@color/colorBlack"
+                android:textSize="13sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginBottom="@dimen/margin_quarter"
+            android:text="Jadwal" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptySchedule"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:textStyle="italic"
+            android:text="Tidak ada jadwal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/adapter_posyandu_small"
+            tools:itemCount="2"
+            android:id="@+id/rvSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginBottom="@dimen/margin_quarter"
+            android:text="Kit Posyandu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptykit"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:textStyle="italic"
+            android:text="Tidak ada Kit"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvKit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginBottom="@dimen/margin_quarter"
+            android:text="Pelayanan Posyandu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptyService"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:textStyle="italic"
+            android:text="Tidak ada Pelayanan"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginBottom="@dimen/margin_quarter"
+            android:text="Kader Posyandu" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvEmptyKader"
+            android:layout_marginBottom="@dimen/margin_1x"
+            android:textStyle="italic"
+            android:text="Tidak ada Kader"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvKader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:fontFamily="@font/poppins_bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_3_per_4"
+            android:layout_marginEnd="@dimen/margin_3_per_4"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginBottom="@dimen/margin_quarter"
+            android:text="Foto Posyandu" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:background="?selectableItemBackground"
+            android:layout_marginStart="@dimen/margin_1x"
+            android:layout_marginEnd="@dimen/margin_1x"
+            android:layout_marginTop="@dimen/margin_half"
+            android:id="@+id/imgPosyandu"
+            android:scaleType="fitXY"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <com.google.android.material.button.MaterialButton
+            app:icon="@drawable/ic_baseline_directions_24"
+            android:id="@+id/btnLocation"
+            android:text="Lokasi Posyandu"
+            android:layout_margin="@dimen/margin_1x"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+</androidx.core.widget.NestedScrollView>
+

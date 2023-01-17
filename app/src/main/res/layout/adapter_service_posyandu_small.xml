@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_half"
+    app:cardCornerRadius="@dimen/margin_half">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorBackgroundBase"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_half">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:scaleType="fitXY"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_half"
+            android:id="@+id/imgPosyandu"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:importantForAccessibility="no"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginStart="@dimen/margin_half"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/tvPosyanduName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/colorAccent"
+            android:textStyle="bold"
+            tools:text="Category" />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

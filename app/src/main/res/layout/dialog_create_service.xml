@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_1x">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnCloseDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="?selectableItemBackground"
+        android:src="@drawable/ic_close" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTitleDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_half"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Tambah Pelayanan Baru" />
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:text="Pelayanan" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/TextInputLayoutStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_half"
+        app:hintAnimationEnabled="true">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/edtServiceName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvLabelAddress"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Isi nama Pelayanan"
+            android:inputType="textMultiLine"
+            android:padding="@dimen/margin_1x"
+            android:textColor="@color/colorBlack" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:text="Foto Pelayanan" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:src="@drawable/ic_img"
+            android:layout_marginEnd="@dimen/margin_1x"
+            android:id="@+id/imgAttachedService"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/margin_half"
+            android:id="@+id/rlUploadPhoto"
+            tools:ignore="UnusedAttribute"
+            android:layout_weight="7"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:background="@drawable/background_border_card"
+            android:foreground="?selectableItemBackground"
+            android:padding="@dimen/margin_half">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUploadImageService"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Klik untuk memilih foto pelayanan baru"
+                android:textAlignment="center" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgService"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_1x"
+        android:text="Submit" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

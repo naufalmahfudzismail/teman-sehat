@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#307A59</color>
+    <color name="colorAccentRed">#CF2A27</color>
+    <color name="colorAnotherAccent">#01a7e1</color>
+    <color name="colorAccentLight">#C9E0CA</color>
+    <color name="colorAccentMoreLight">#8006A7E2</color>
+    <color name="colorAccentVeryLight">#d3f3fc</color>
+    <color name="colorTextPrimary">#000000</color>
+    <color name="colorTextGrey">#888889</color>
+    <color name="colorTextLightGrey">#A7A7A7</color>
+    <color name="colorTextBgLightGrey">#E0E0E0</color>
+    <color name="colorTextButton">#FFFFFF</color>
+    <color name="colorBackgroundButton">@color/colorAccent</color>
+    <color name="colorBackgroundBase">#FFFFFF</color>
+    <color name="colorDummyBackground">#F1F1F1</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#FF499B54</color>
+    <color name="colorGrey">#888889</color>
+    <color name="colorGreyHover">#4D888889</color>
+    <color name="colorGreyDraker">#2C2C2C</color>
+    <color name="colorWhiteLighter">#99FFFFFF</color>
+    <color name="colorOrange">#FFBB5A2B</color>
+    <color name="colorRed">#FF0600</color>
+    <color name="colorYellow">#E6FF00</color>
+    <color name="colorDefault">#FFF9F9F9</color>
+    <color name="colorSeparator">#E7E6E6</color>
+    <color name="picker">#BB5A2B</color>
+    <color name="colorBlueLight">#E1F5FE</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#557153</color>
+    <color name="colorCalendarGrey">#474747</color>
+    <color name="colorGreyLight">#EEEEEE</color>
+    <color name="calendar_selected_day_bg">#06A7E2</color>
+    <color name="calendar_selected_range_bg">#06A7E2</color>
+    <color name="orange_hover">#33FFA500</color>
+
+    <color name="granite">#B7B8B6</color>
+    <color name="pine">#34675c</color>
+    <color name="fields">#B3C100</color>
+    <color name="blue_sky">#4CB5f5</color>
+
+    <color name="text_task">#6D6E71</color>
+    <color name="colorDivider">#BBBDBF</color>
+
+    <color name="material_deep_teal_200" tools:override="true">#06A7E2</color>
+    <color name="material_deep_teal_500" tools:override="true">#06A7E2</color>
+
+
+</resources>
